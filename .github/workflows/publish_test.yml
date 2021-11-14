@@ -3,7 +3,7 @@ on:
 
 jobs:
   publish:
-    name: Publish to pypi
+    name: Publish to pypi test
     runs-on: ubuntu-latest
 
     steps:
