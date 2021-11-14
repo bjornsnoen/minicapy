@@ -8,3 +8,4 @@
 !Dockerfile.*
 !.github/
 !.github/**
+!MANIFEST.in
