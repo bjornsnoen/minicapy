@@ -52,6 +52,6 @@ setup(
     platforms=[get_platform()],
     package_data={"minicapy": ["minica.dll"]},
     has_ext_modules=lambda: True,
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     cmdclass={"build_ext": MyBuild},
 )

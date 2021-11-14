@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  publish:
+    name: Publish to pupo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Add python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+
+      - name: Install twine
+        run: pip install twine
+
+      # Skip because can't figure out manylinux
+      # - uses: actions/setup-go@v2
+      #   with:
+      #     go-version: "^1.13.1"
+
+      - name: Build sdist
+        run: make sdist
+
+      - name: Check
+        run: twine check dist/*
+
+      - name: Publish
+        run: twine upload --repository-url https://test.pypi.org/legacy/ -u __token__ -p ${{ secrets.PYPI_TOKEN }} dist/*

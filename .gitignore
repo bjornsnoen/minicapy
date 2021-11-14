@@ -1,0 +1,10 @@
+*
+!.gitignore
+!minicapy/
+!minicapy/**
+!Makefile
+!setup.py
+!README.md
+!Dockerfile.*
+!.github/
+!.github/**

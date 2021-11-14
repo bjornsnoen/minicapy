@@ -1,0 +1,14 @@
+ARG manylinux_arch
+
+FROM quay.io/pypa/manylinux_2_24_${manylinux_arch}
+ARG go_arch
+
+RUN curl -O https://dl.google.com/go/go1.17.3.linux-${go_arch}.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.3.linux-${go_arch}.tar.gz
+ENV PATH=/usr/local/go/bin:${PATH}
+RUN go version
+RUN update-alternatives --install /usr/bin/python python /usr/local/bin/python3.7 1
+
+WORKDIR /build/mount
+
+CMD ["make", "bdist"]

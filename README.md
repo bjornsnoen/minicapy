@@ -6,9 +6,9 @@ This package is pip installable, simply
 
 `pip install minicapy`
 
-If you want to build it yourself there is a makefile included.  If there is no
-binary wheel for your platform you'll need to have `gnu make` and `go` installed
-in order to install this package.
+You will need to have a fairly recent version of `go` and `make` installed
+in order to build the library, because I can't figure out manylinux to provide
+binary dist wheels.
 
 ## Usage
 ```python
