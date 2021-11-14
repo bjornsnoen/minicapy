@@ -1,5 +1,5 @@
-# Minicapy, python bindings for minica, a mini CA A small python library for
-using minica to create ssl certificates
+# Minicapy, python bindings for minica, a mini CA 
+A small python library for using minica to create ssl certificates
 
 ## Installation
 This package is pip installable, simply
