@@ -8,7 +8,7 @@ from setuptools import setup
 from setuptools.command.build_ext import build_ext as BuildCommand
 from setuptools.command.install import install as InstallCommand
 
-version = "1.0.1"
+version = "1.0.0"
 
 
 @dataclass
