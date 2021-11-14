@@ -8,6 +8,8 @@ from setuptools import setup
 from setuptools.command.build_ext import build_ext as BuildCommand
 from setuptools.command.install import install as InstallCommand
 
+version = "1.0.1"
+
 
 @dataclass
 class MissingDependencyException(Exception):
@@ -47,7 +49,7 @@ setup(
     maintainer_email="bjorn.snoen+minica@gmail.com",
     url="https://github.com/bjornsnoen/minicapy",
     license="GPLv3",
-    version="1.0.0",
+    version=version,
     packages=["minicapy"],
     platforms=[get_platform()],
     package_data={"minicapy": ["minica.dll"]},
