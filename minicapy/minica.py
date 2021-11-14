@@ -1,4 +1,4 @@
-from ctypes import cdll, c_char_p
+from ctypes import c_char_p, cdll
 from pathlib import Path
 
 minicaso = cdll.LoadLibrary(Path(__file__).parent / "minica.dll")

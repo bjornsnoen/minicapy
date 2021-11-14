@@ -1,14 +1,14 @@
-# Minicapy, python bindings for minica, a mini CA
-A small python library for using minica to create ssl certificates
+# Minicapy, python bindings for minica, a mini CA A small python library for
+using minica to create ssl certificates
 
 ## Installation
-Hopefully you should be able to simply pip install this package
+This package is pip installable, simply
 
 `pip install minicapy`
 
-If there is no wheel built for your platform you'll have to build
-the package yourself. All you need is the go language and gnu make.
-Once those are installed, simply run `make` in the root of the repo.
+If you want to build it yourself there is a makefile included.  If there is no
+binary wheel for your platform you'll need to have `gnu make` and `go` installed
+in order to install this package.
 
 ## Usage
 ```python

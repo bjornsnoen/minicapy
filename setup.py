@@ -1,11 +1,12 @@
-from setuptools import setup
-from distutils.util import get_platform
-from setuptools.command.install import install as InstallCommand
-from setuptools.command.build_ext import build_ext as BuildCommand
 import shutil
 from dataclasses import dataclass
-from subprocess import run
+from distutils.util import get_platform
 from pathlib import Path
+from subprocess import run
+
+from setuptools import setup
+from setuptools.command.build_ext import build_ext as BuildCommand
+from setuptools.command.install import install as InstallCommand
 
 
 @dataclass
