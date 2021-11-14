@@ -1,7 +1,5 @@
 on:
   push:
-    branches:
-      - "master"
 
 jobs:
   publish:
@@ -34,5 +32,5 @@ jobs:
       - name: Publish
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
-        run: twine upload --repository-url https://pypi.org/legacy/ dist/*
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_TOKEN }}
+        run: twine upload --repository-url https://test.pypi.org/legacy/ dist/*
