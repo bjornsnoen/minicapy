@@ -6,9 +6,8 @@ from subprocess import run
 
 from setuptools import setup
 from setuptools.command.build_ext import build_ext as BuildCommand
-from setuptools.command.install import install as InstallCommand
 
-version = "1.0.0"
+version = "1.1.0"
 
 
 @dataclass
@@ -34,7 +33,9 @@ class MyBuild(BuildCommand):
         build_lib = Path(self.build_lib)
         if not build_lib.exists():
             build_lib.mkdir(parents=True)
-        self.copy_file("minicapy/minica.dll", build_lib / "minicapy" / "minica.dll")
+        self.copy_file(
+            "minicapy/minica.dll", str(build_lib / "minicapy" / "minica.dll")
+        )
 
 
 with open("README.md", "r") as fh:

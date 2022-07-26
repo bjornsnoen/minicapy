@@ -1,4 +1,6 @@
 *
+!tests/
+!tests/**
 !.gitignore
 !minicapy/
 !minicapy/**
@@ -10,3 +12,6 @@
 !.github/**
 !MANIFEST.in
 !LICENSE.md
+!pyproject.toml
+
+__pycache__/
