@@ -7,7 +7,7 @@ from subprocess import run
 from setuptools import setup
 from setuptools.command.build_ext import build_ext as BuildCommand
 
-version = "1.1.0"
+version = "1.1.1"
 
 
 @dataclass
