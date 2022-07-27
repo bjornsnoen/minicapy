@@ -1,1 +1,1 @@
-include Makefile
+include Makefile minicapy/go.mod minicapy/go.sum
